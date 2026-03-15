@@ -1,0 +1,7 @@
+configuration:
+  server_address: 
+    name: Server address
+    description:
+  bus_id:
+    name: Bus ID
+    description:

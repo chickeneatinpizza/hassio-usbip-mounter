@@ -1,28 +1,28 @@
-# Home Assistant Add-on: USBIP Mounter
+# Home Assistant app: USBIP Mounter
 
-This add-on allows you to attach usb devices using the linux kernel [usbip kernel module][usbip]. Before installation verify that your base supervisor system has the proper configurations and modules to use this add-on.
+This app allows you to attach usb devices using the linux kernel [usbip kernel module][usbip]. Before installation verify that your base supervisor system has the proper configurations and modules to use this app.
 
 ## Requirements
 
-This add-on uses the host system's kernel usbip module so there are some minimum requierments of the base system that sypervisor is running on. Depending on which configuration you are using verify your system meets all dependencies.
+This app uses the host system's kernel usbip module so there are some minimum requierments of the base system that supervisor is running on. Depending on which configuration you are using, verify your system meets all dependencies.
 
 ### Home Assistant OS
-If using [Home Assistant OS][hassos] the minimum requiered version is 9.0. The usbip driver was added in the 9.0 [release][[hassio9].
+If using [Home Assistant OS][hassos] the minimum requiered version is 9.0. The usbip driver was added in the [9.0 release][hassio9].
 
 ### Debian Supervised
 You must install the usbip [debian package][usbip-debian] with all its dependencies. It may be a good idea to test attaching a usbip device outside of home assistant in general if you are unsure how to verify this is installed.
  
 ## How to use
 
-This add-on is intended to allow you to mount one or multiple usbip devices to your Home Assistant server. The main use case is to attach "remote" bluetooth adapters that may be attached to other computers on your network. This means that another system that is running the usbip server component is requiered with the attached device. For example you may have existing Raspberry Pis in your house performing other tasks, you could attach one of the supported [bluetooth adapters][ha-bluetooth], install usbip and export the device for sharing. With this add-on running the adapter would show up as an additional bluetooth adapter. This is especially useful for bluetooth integrations that rely on 2way bluetooth communication as the esp32 bluetooth-proxy does not currently support those devices.
+This app is intended to allow you to mount one or multiple usbip devices to your Home Assistant server. The main use case is to attach "remote" bluetooth adapters that may be attached to other computers on your network. This means that another system that is running the usbip server component is required with the attached device. For example, you may have existing Raspberry Pis in your house performing other tasks, you could attach one of the supported [bluetooth adapters][ha-bluetooth], install usbip and export the device for sharing. With this app running, the adapter would show up as an additional bluetooth adapter. This is especially useful for bluetooth integrations that rely on two-way bluetooth communication, as the esp32 bluetooth-proxy does not currently support those devices.
 
-Usbip is not limited to bluetooth adapters as most usb devices should be able to function as long as they are natively supported by Home Assistant.
+Usbip is not limited to bluetooth adapters, as most usb devices should be able to function as long as they are natively supported by Home Assistant.
 
 ## Configuration
 
-**Note**: _Remember to restart the add-on when the configuration is changed._
+**Note**: _Remember to restart the app when the configuration is changed._
 
-USBIP Mounter add-on configuration:
+USBIP Mounter app configuration:
 
 ```yaml
 devices:
@@ -39,7 +39,7 @@ The following options are for the option list: `devices`. Each remote usbip devi
 
 #### Option `devices`: `server_address`
 
-This must be the ip address of the usbipd server that is exporting the device. Usbip uses TCP port 3240 by default, currently this add-on expects the server to be using that port.
+This must be the ip address of the usbipd server that is exporting the device. Usbip uses TCP port 3240 by default, currently this app expects the server to be using that port.
 
 #### Option `devices`: `bus_id`
 
@@ -47,7 +47,7 @@ This is the bind-id of the exported usb devices on the usbip server. Check the u
 
 ## Usbip Server Configuration
 
-Setting up the usbip server exporting the usb devices is a bit out of scope of this add-on but the following provides some useful information.
+Setting up the usbip server exporting the usb devices is a bit out of scope of this app but the following provides some useful information.
 
 Depending on the linux distro running on your server the requiered packages will be slighty different.
 Debian: apt install usbip hwdata
@@ -66,7 +66,7 @@ One example of configuring usbip servers using systemd can be found [here][usbip
 
 ## Authors & contributors
 
-The original setup of this repository is by [Ilya Rakhlin][irakhlin].
+The original author of this app is [Ilya Rakhlin][irakhlin]. It is forked here for personal use so that I can keep it more or less up to date.
 
 ## License
 
