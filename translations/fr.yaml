@@ -1,9 +1,11 @@
 configuration:
   devices:
     name: Périphériques
-  server_address: 
-    name: Adresse du serveur
     description:
-  bus_id:
-    name: ID du bus
-    description:
+    fields:
+      server_address: 
+        name: Adresse du serveur
+        description:
+      bus_id:
+        name: ID du bus
+        description:

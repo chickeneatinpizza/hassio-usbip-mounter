@@ -1,9 +1,11 @@
 configuration:
   devices:
     name: Geräte
-  server_address: 
-    name: Server-Adresse
     description:
-  bus_id:
-    name: Bus-ID
-    description:
+    fields:
+      server_address: 
+        name: Server-Adresse
+        description:
+      bus_id:
+        name: Bus-ID
+        description:
