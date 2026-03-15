@@ -1,4 +1,6 @@
 configuration:
+  devices:
+    name: Périphériques
   server_address: 
     name: Adresse du serveur
     description:
