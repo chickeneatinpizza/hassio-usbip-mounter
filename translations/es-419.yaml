@@ -1,4 +1,6 @@
 configuration:
+  devices:
+    name: Dispositivos
   server_address: 
     name: Dirección del servidor
     description:

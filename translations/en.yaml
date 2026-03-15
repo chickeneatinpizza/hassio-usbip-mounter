@@ -1,4 +1,6 @@
 configuration:
+  devices:
+    name: Devices
   server_address: 
     name: Server address
     description:
